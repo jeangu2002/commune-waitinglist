@@ -1,142 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codewell - Waiting list landing page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="flex justify-center min-h-screen bg-[#f6f9fe]">
-    <div class="container px-8">
-      <header class="flex items-center justify-between pt-12 relative overflow-hidden">
-        <div class="logo">
-          <img src="Assets/Logo.svg" alt="brand logo" />
-        </div>
 
-        <nav id="nav-links" class="absolute lg:static translate-x-[100vw] lg:translate-x-0 ">
-          <ul class="lg:flex lg:gap-8">
-            <li><a href="" class="hover:cursor">Features</a></li>
-            <li><a href="" class="hover:cursor">Affilicates</a></li>
-            <li><a href="" class="hover:cursor">pricing</a></li>
-            <li><a href="" class="hover:cursor">pricing</a></li>
-            <li>
-              <a href="" class="bg-dark-purple text-[white] px-4 py-2 rounded hover:cursor"
-                >Join Waitlist</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <button class="lg:hidden">
-           <img src="Assets/Hamburger Menu.svg" alt="Hamburger menu"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codewell - Waiting list landing page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center min-h-screen bg-[#f6f9fe]">
+  <div class="container px-8">
+    <header class="flex items-center justify-between pt-12 relative overflow-hidden">
+      <div class="logo">
+        <img src="Assets/Logo.svg" alt="brand logo" />
+      </div>
+
+      <nav id="nav-links"
+        class="fixed flex justify-between p-3 sm:p-8 lg:static top-0 right-0 w-1/2 sm:w-2/5 lg:w-auto text-[white] lg:text-[unset] lg:w-[unset]  lg:static transition-transform translate-x-[100vw] lg:translate-x-0 h-screen lg:h-[unset] bg-[#BBAFDF] lg:bg-[unset]">
+        <ul class="mt-8 lg:mt-0 flex flex-col items-center text-xl lg:text-normal lg:items-[unset] lg:flex-row gap-8 [&>li]:hover:text-dark-purple [&>li]:transition-all">
+          <li><a href="" class="hover:cursor">Features</a></li>
+          <li><a href="" class="hover:cursor">Affilicates</a></li>
+          <li><a href="" class="hover:cursor">pricing</a></li>
+          <li><a href="" class="hover:cursor">pricing</a></li>
+          <li>
+            <a href="" class="transition-all bg-gradient-to-r from-dark-purple to-dark-purple  bg-no-repeat text-[white] px-4 py-2 rounded hover:cursor border-2 border-transparent  hover:bg-[length:100%_0%] hover:border-dark-purple hover:text-dark-purple">
+              Join Waitlist</a>
+          </li>
+        </ul>
+        <button aria-label="Close menu" class="lg:hidden self-start justify-between" id="close-menu-btn">
+          <img src="Assets/CloseMenu.svg" alt="Close menu button">
         </button>
-      </header>
-      <main class="flex flex-col gap-16">
-        <div class="flex items-center mt-32 gap-10 justify-between">
-          <div class="flex flex-col gap-6 lg:gap-12">
-            <div class="flex flex-col gap-4 text-center lg:text-left">
-              <p
-                class="rounded-full bg-dark-purple text-[white] self-start py-1 px-3"
-              >
-                Were are now allowing early-access for users.
-                <a href="" class="underline font-bold">Learn more</a>.
-              </p>
-              <div>
-                <h1 class="text-5xl text-dark-purple leading-tight">
-                  Build a highly engaged community with no effort.
-                </h1>
-                <p>
-                  Communue offers the tools you need to build a highly engaged
-                  community with little to no effort. Simply set up your Commune
-                  workspace and manage everything from members to content from
-                  one central dashboard.
-                </p>
-              </div>
-              <div class="flex flex-col gap-4 sm:flex-row">
-                <div class="px-2 bg-[white] h-12 md:min-w-[45%] sm:flex-1 lg:flex-none">
-                  <input
-                    class="h-full focus-within:outline-none"
-                    type="text"
-                    name="emailInput"
-                    id="emailInput"
-                    placeholder="Enter your e-mail address"
-                  />
-                </div>
-
-                <button class="bg-dark-purple rounded text-[white] p-3 lg:flex-none">
-                  Join Waitlist
-                </button>
-              </div>
-            </div>
-
+      </nav>
+      <button aria-label="Open menu" class="lg:hidden" id="toggle-menu-btn">
+        <img src="Assets/Hamburger Menu.svg" alt="Open menu button">
+      </button>
+    </header>
+    <main class="flex flex-col gap-16">
+      <div class="flex items-center mt-32 gap-10 justify-between">
+        <div class="flex flex-col gap-6 lg:gap-12">
+          <div class="flex flex-col gap-4 text-center lg:text-left">
+            <p class="rounded-full bg-dark-purple text-[white] self-center lg:self-start py-1 px-3">
+              Were are now allowing early-access for users.
+              <a href="" class="underline font-bold">Learn more</a>.
+            </p>
             <div>
-              <strong>used by these companies</strong>
-              <ul class="flex gap-2  flex-wrap mt-4">
-                <li>
-                  <a href="">
-                    <img src="Assets/Atlassian Icon.svg" alt="Atlassian" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="Assets/Behance Icon.svg" alt="Behance" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="Assets/Bing Icon.svg" alt="Bing" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="Assets/Bitbucket Icon.svg" alt="Bitbucket" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="Assets/Dropbox Icon.svg" alt="Dropbox" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="Assets/Twitch Icon.svg" alt="Twitch" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="Assets/Twitter Icon.svg" alt="Twitter" />
-                  </a>
-                </li>
-              </ul>
+              <h1 class="text-clamp  text-dark-purple leading-tight">
+                Build a highly engaged community with no effort.
+              </h1>
+              <p>
+                Communue offers the tools you need to build a highly engaged
+                community with little to no effort. Simply set up your Commune
+                workspace and manage everything from members to content from
+                one central dashboard.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 sm:flex-row">
+              <div class="px-2 bg-[white] h-12 md:min-w-[45%] sm:flex-1 lg:flex-none">
+                <input class="h-full focus-within:outline-none" type="text" name="emailInput" id="emailInput"
+                  placeholder="Enter your e-mail address" />
+              </div>
+
+              <button class="rounded p-3 lg:flex-none transition-all bg-gradient-to-r from-dark-purple to-dark-purple  bg-no-repeat text-[white] px-4 py-2 rounded hover:cursor border-2 border-transparent  hover:bg-[length:100%_0%] hover:border-dark-purple hover:text-dark-purple">
+                Join Waitlist
+              </button>
             </div>
           </div>
 
-          <img src="Assets/Illustration.png" alt="Illustration" class="w-1/3 hidden lg:block" />
+          <div>
+            <strong>used by these companies</strong>
+            <ul class="flex gap-2  flex-wrap mt-4">
+              <li>
+                <a href="">
+                  <img src="Assets/Atlassian Icon.svg" alt="Atlassian" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="Assets/Behance Icon.svg" alt="Behance" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="Assets/Bing Icon.svg" alt="Bing" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="Assets/Bitbucket Icon.svg" alt="Bitbucket" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="Assets/Dropbox Icon.svg" alt="Dropbox" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="Assets/Twitch Icon.svg" alt="Twitch" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="Assets/Twitter Icon.svg" alt="Twitter" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </main>
-    </div>
-    <script>
-      tailwind.config = {
-        theme: {
-          fontFamily: {
-            sans: [
-              '"Nunito Sans", sans-serif',
-              {
-                fontFeatureSettings: '"cv11", "ss01"',
-                fontVariationSettings: '"opsz" 12',
-              },
-            ],
-          },
-          colors: {
-            "dark-purple": "#372865",
-          },
+
+        <img src="Assets/Illustration.png" alt="Illustration" class="w-1/3 hidden lg:block" />
+      </div>
+    </main>
+  </div>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: [
+            '"Nunito Sans", sans-serif',
+            {
+              fontFeatureSettings: '"cv11", "ss01"',
+              fontVariationSettings: '"opsz" 12',
+            },
+          ],
         },
-      };
-    </script>
-  </body>
+        colors: {
+          "dark-purple": "#372865",
+        },
+        fontSize:{
+        clamp: 'clamp(2rem, -1rem + 6.25vw, 3rem)'
+      } 
+      }
+    };
+
+    const openMenuBtn = document.getElementById('toggle-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    openMenuBtn.addEventListener('click', function () {
+      document.getElementById('nav-links').classList.add('translate-x-0')
+    }); 
+    closeMenuBtn.addEventListener('click', function () {
+      document.getElementById('nav-links').classList.remove('translate-x-0')
+    }); 
+  </script>
+</body>
+
 </html>
